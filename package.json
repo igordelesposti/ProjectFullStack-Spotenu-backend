@@ -1,0 +1,48 @@
+{
+  "name": "projectfullstack-spotenu-backend",
+  "version": "1.0.0",
+  "description": "Repositório do projeto Spotenu",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "ts-node-dev src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igordelesposti/ProjectFullStack-Spotenu-backend.git"
+  },
+  "author": "Igor Delesposti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/igordelesposti/ProjectFullStack-Spotenu-backend/issues"
+  },
+  "homepage": "https://github.com/igordelesposti/ProjectFullStack-Spotenu-backend#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.21.1",
+    "moment": "^2.27.0",
+    "mysql": "^2.18.1",
+    "serverless-http": "^2.5.0",
+    "ts-node-dev": "^1.0.0-pre.49",
+    "uuid": "^8.1.0"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/cors": "^2.8.6",
+    "@types/express": "^4.17.6",
+    "@types/jsonwebtoken": "^8.5.0",
+    "@types/knex": "^0.16.1",
+    "@types/uuid": "^8.0.0",
+    "serverless-dotenv-plugin": "^2.4.2",
+    "serverless-offline": "^6.4.0",
+    "serverless-webpack": "^5.3.2",
+    "ts-loader": "^7.0.5",
+    "typescript": "^3.9.5",
+    "webpack": "^4.43.0",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
