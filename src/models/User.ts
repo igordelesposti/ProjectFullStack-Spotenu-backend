@@ -14,6 +14,27 @@ export interface User {
   type: string;
 }
 
+export interface UserAdministrator {
+  id: string;
+  name: string;
+  email: string;
+  nickname: string;
+  password: string;
+  type: string;
+  isApproved: boolean;
+}
+
+export interface Band {
+  id: string;
+  name: string;
+  email: string;
+  nickname: string;
+  password: string;
+  type: string;
+  description: string;
+  isApproved: boolean;
+}
+
 export interface signUpDTO {
   name: string;
   email: string;
@@ -22,7 +43,28 @@ export interface signUpDTO {
   type: string;
 }
 
+export interface signUpBandDTO {
+  name: string;
+  email: string;
+  nickname: string;
+  password: string;
+  type: string;
+  description: string;
+  isApproved: boolean;
+  
+}
+
+export interface signUpAdministratorDTO {
+  name: string;
+  email: string;
+  nickname: string;
+  password: string;
+  type: string;
+  isApproved: boolean;
+}
+
 export interface loginDTO{
   email: string;
   password: string;
+  type: string;
 }
