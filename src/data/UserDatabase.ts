@@ -4,7 +4,7 @@ import CustomError from "../err/CustomError";
 
 export default class UserDatabase extends BaseDataBase {
   
-  private static readonly TABLE_NAME: string = "spotenu_users";
+  public static readonly TABLE_NAME: string = "spotenu_users";
 
   public async signup(user: User) {
     await this.getConnection()

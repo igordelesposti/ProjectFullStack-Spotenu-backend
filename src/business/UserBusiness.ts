@@ -146,6 +146,7 @@ export default class UserBusiness {
       id,
       type: userData.type,
     });
+  
 
     await userDatabase.signupAdministrator(userData);
 

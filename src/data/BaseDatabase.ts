@@ -7,6 +7,9 @@ dotenv.config();
 export default abstract class BaseDatabase {
   private static connection: Knex | null = null;
 
+  public static readonly TABLE_NAME: string = "spotenu_users";
+  public static readonly TABLE_GENRE: string = "spotenu_genre"
+
   protected getConnection(): Knex {
     if (!BaseDatabase.connection) {
       BaseDatabase.connection = knex({
