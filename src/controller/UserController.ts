@@ -98,6 +98,7 @@ export default class UserController {
         type,
       });
 
+
       response.status(200).send({ accessToken });
     } catch (err) {
       if (err instanceof CustomError)
