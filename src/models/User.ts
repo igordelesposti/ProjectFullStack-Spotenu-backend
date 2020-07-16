@@ -12,6 +12,8 @@ export interface User {
   nickname: string;
   password: string;
   type: string;
+  description?: string;
+  isApproved: boolean;
 }
 
 export interface UserAdministrator {
