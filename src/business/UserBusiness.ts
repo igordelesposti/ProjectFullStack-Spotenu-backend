@@ -46,6 +46,7 @@ export default class UserBusiness {
       nickname,
       password: hashedPassword,
       type,
+      isApproved: true,
     };
 
     const accessToken = new Authenticator().generateToken({ id });
@@ -146,7 +147,6 @@ export default class UserBusiness {
       id,
       type: userData.type,
     });
-  
 
     await userDatabase.signupAdministrator(userData);
 
@@ -161,6 +161,8 @@ export default class UserBusiness {
     const user = await userDatabase.getUserByEmail(email);
 
     if (!user) throw new CustomError("Email ou password está incorreto", 400);
+
+    if (!user.isApproved) throw new CustomError("Essa banda ainda não foi aprovada.", 400)
 
     const correctPassword = await new HashManager().compare(
       password,

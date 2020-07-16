@@ -3,7 +3,7 @@ import { Authenticator } from "../services/Authenticator";
 import CustomError from "../err/CustomError";
 import GenreBusiness from "../business/GenreBusiness";
 import { GenreDataBase } from "../data/GenreDataBase";
-import userRouter from "../router/user.routes";
+
 
 export class GenreController {
   public async addGenre(request: Request, response: Response) {
