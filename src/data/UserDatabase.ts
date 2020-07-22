@@ -65,4 +65,13 @@ export default class UserDatabase extends BaseDataBase {
       .from(UserDatabase.TABLE_NAME);
     return result[0];
   }
+
+  public async getUserById(id: string){
+    const result = await this.getConnection()
+    .select("*")
+    .where({ id})
+    .from(UserDatabase.TABLE_NAME);
+
+    return result[0];
+  }
 }

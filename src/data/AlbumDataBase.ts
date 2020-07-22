@@ -33,4 +33,17 @@ export class AlbumDataBase extends BaseDataBase {
       throw new Error(err.message);
     }
   }
+
+  public async getAlbumByUser(created_by:string) {
+    try {
+      const result = await this.getConnection()
+        .select("*")
+        .from(AlbumDataBase.TABLE_ALBUMS)
+        .where({ created_by });
+
+      return result;
+    } catch (err) {
+      throw new Error(err.message);
+    }
+  }
 }
