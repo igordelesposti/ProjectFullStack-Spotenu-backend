@@ -35,8 +35,8 @@ export class GenreController {
 
       const authenticator = new Authenticator().getData(auth);
 
-      if (authenticator.type !== "admin" && "band") {
-        throw new CustomError("Você precisa estar logado como Admin ou Banda.", 400);
+      if (authenticator.type !== "band") {
+        throw new CustomError("Você precisa estar logado como Banda.", 400);
       }
 
       const result = await new GenreDataBase().getAllGenres();

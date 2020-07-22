@@ -21,7 +21,7 @@ export default class UserBusiness {
 
     if (userExist) throw new CustomError("Email já em uso.", 400);
 
-    if (!name || !email || !nickname || !password || !type) {
+    if (!name || !email || !nickname || !password) {
       throw new CustomError("Preencha os campos para prosseguir.", 400);
     }
     if (email.indexOf("@") === -1) {

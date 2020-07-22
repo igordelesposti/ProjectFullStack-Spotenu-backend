@@ -2,8 +2,29 @@ import { Request, Response } from "express";
 import UserBusiness from "../business/UserBusiness";
 import CustomError from "../err/CustomError";
 import { Authenticator } from "../services/Authenticator";
+import UserDatabase from "../data/UserDatabase";
 
 export default class UserController {
+
+  public async getUserById(request: Request, response: Response){
+    try {
+      const auth = request.headers.authorization as string;
+
+      const authenticator = new Authenticator().getData(auth);
+
+      const dataBase = await new UserDatabase().getUserById(authenticator.id)
+      response.status(200).send({ result:{
+        name: dataBase.name
+      } });
+
+    } catch (err) {
+      if (err instanceof CustomError)
+        response.status(err.status).send({ error: err.message });
+      else {
+        response.status(500).send({ error: err });
+      }
+    }
+  }
   public async signUp(request: Request, response: Response) {
     const { name, email, nickname, password, type } = request.body;
 
