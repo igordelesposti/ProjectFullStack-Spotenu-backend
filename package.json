@@ -38,11 +38,11 @@
     "@types/knex": "^0.16.1",
     "@types/uuid": "^8.0.0",
     "serverless-dotenv-plugin": "^2.4.2",
-    "serverless-offline": "^6.4.0",
-    "serverless-webpack": "^5.3.2",
+    "serverless-offline": "^6.5.0",
+    "serverless-webpack": "^5.3.3",
     "ts-loader": "^7.0.5",
     "typescript": "^3.9.5",
-    "webpack": "^4.43.0",
+    "webpack": "^4.44.0",
     "webpack-node-externals": "^1.7.2"
   }
 }
