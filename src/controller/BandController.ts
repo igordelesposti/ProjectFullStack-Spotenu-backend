@@ -21,6 +21,7 @@ export class BandController {
           nickname: band.nickname,
           email: band.email,
           isApproved: band.isApproved,
+          id: band.id
         };
       });
 
